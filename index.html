@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TEST</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body class="red lighten-3">
+    <div class="container">
+        <h1 class="center align">Diabetes Predictor</h1>
+        <div style="padding: 10px;" class="card row">
+   <form action="http://localhost:8080/sendFeatures" method="post" class="col s12">
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="num_pregnant" name="num_pregnant" id="num_pregnant" type="text" class="validate">
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="glucose_concentration" name="glucose" id="glucose_concentration" type="text" class="validate">
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="Diastolic_blood_pressure" name="pressure" id="Diastolic_blood_pressure" type="text" class="validate">
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="riceps_skin_fold_thickness" name="riceps" id="riceps_skin_fold_thickness" type="text" class="validate">
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="2hr_serum_insulin" name="serum" id="2hr_serum_insulin" type="text" class="validate">
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="BMI" name="BMI" id="BMI" type="text" class="validate">
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="diabetics_pedigree_function" name="pedigree" id="diabetics_pedigree_function" type="text" class="validate">
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="age" name="age" id="age" type="text" class="validate">
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="diabetic" name="diabetic" id="diabetic" type="text" class="validate">
+       </div>
+     </div>
+     <div class="row">
+       <div class="submit-field input-field col s6 offset-s3">
+         <input class="waves-effect waves-light red lighten-3 btn" type="submit" value="Submit" />
+       </div>
+     </div>
+   </form>
+ </div>
+
+    </div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  </body>
+</html>
