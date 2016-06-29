@@ -12,12 +12,29 @@
   </head>
   <body class="red lighten-2">
     <div class="container">
-        <h1>The predictor believes that you have diabetes.</h1>
+        <h1 id="prediction">The predictor believes that you have diabetes.</h1>
         <div class="card center align">
           <h3>You should contact your doctor.</h3>
         </div>
     </div
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.min.js"></script>
+    <script>
+      $(function() {
+        $.get('/sendFeatures', function(res) {
+          console.log("Score recieved: " + res);
+          if(res*100 >= 60 && res*100 < 70) {
+            $('#prediction').text("The predictor believes that it is likely that you  have diabetes.");
+          } else if(res*100 >= 70 && res*100 < 80) {
+            $('#prediction').text("The predictor believes that it is highly likely that you have diabetes.");
+          } else if(res*100 >= 80 && res*100 < 90) {
+            $('#prediction').text("The predictor believes that there is a strong indicator that you have diabetes.");
+          } else if(res*100 >= 90){
+            $('#prediction').text("The predictor believes that you have diabetes.");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
