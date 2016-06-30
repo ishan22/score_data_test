@@ -46,7 +46,9 @@ app.post('/sendFeatures', function(req, res) {
 });
 
 app.get('/sendFeatures', function(req, res) {
-  res.sendStatus(score);
+  res.send({
+    'score': score
+  });
 });
 
 app.listen(8080);

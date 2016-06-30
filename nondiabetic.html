@@ -14,26 +14,27 @@
     <div class="container center align">
         <h1 id="prediction">The predictor believes that you do not have diabetes.</h1>
         <div class="card center align">
+          <h1 id="score"></h1>
           <h3>Keep doing what you're doing!</h3>
         </div>
     </div
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.min.js"></script>
     <script>
       $(function() {
         $.get('/sendFeatures', function(res) {
-          console.log("Score recieved: " + res);
-          if(res*100 >= 60 && res*100 < 70) {
+          console.log("Score recieved: " + res.score);
+          if(res.score*100 >= 60 && res.score*100 < 70) {
             $('#prediction').text("The predictor believes that it is likely that you do not have diabetes.");
-          } else if(res*100 >= 70 && res*100 < 80) {
+          } else if(res.score*100 >= 70 && res.score*100 < 80) {
             $('#prediction').text("The predictor believes that it is highly likely that you do not have diabetes.");
-          } else if(res*100 >= 80 && res*100 < 90) {
+          } else if(res.score*100 >= 80 && res.score*100 < 90) {
             $('#prediction').text("The predictor believes that there is a strong indicator that you do not have diabetes.");
-          } else if(res*100 >= 90){
+          } else if(res.score*100 >= 90){
             $('#prediction').text("The predictor believes that you definitely do not have diabetes.");
           }
+          $('#score').text("Accuracy: " + res.score * 100 + "%")
         });
       });
     </script>
