@@ -25,8 +25,8 @@ app.get('/cancer', function(req, res) {
   res.sendFile(path.join(__dirname + '/cancer_form.html'));
 });
 
-//post request from index.html
-app.post('/sendFeatures', function(req, res) {
+//post request from cancer_form.html
+app.post('/cancerApp', function(req, res) {
   var data = req.body;
   request({
     url: 'http://ishan:ScoreData4321@console.scoredata.com/api/score/',
