@@ -1,7 +1,7 @@
 {
-  "name": "scoredata_test",
+  "name": "breast_cancer_diag",
   "version": "1.0.0",
-  "description": "",
+  "description": "Breast Cancer Diagnosis UI",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,6 +13,8 @@
     "body-parser": "^1.15.1",
     "chart.js": "^2.1.6",
     "curlrequest": "^0.5.7",
-    "express": "^4.14.0"
-  }
+    "express": "^4.14.0",
+    "request": "^2.74.0"
+  },
+  "devDependencies": {}
 }

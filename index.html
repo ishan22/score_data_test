@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TEST</title>
+    <title>Breast Cancer Diagnosis</title>
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
@@ -13,55 +13,67 @@
 
   <body class="red lighten-3">
     <div class="container">
-        <h1 class="center align">Diabetes Predictor</h1>
+        <h1 class="center align">Breast Cancer Diagnosis Form</h1>
         <div style="padding: 10px;" class="card row">
    <form action="http://localhost:8080/sendFeatures" method="post" class="col s12">
      <div class="row">
        <div class="input-field col s6 offset-s3">
-         <input placeholder="num_pregnant" name="num_pregnant" id="num_pregnant" type="number" min="0" max="20" class="validate">
-         <label for="num_pregnant"><font size="2.5">Number of times pregnant[0-20]</font></label>
+         <input placeholder="Patient ID #" name="patient_id" id="patient_id" type="number">
+         <label for="patient_id"><font size="2.5">Patient ID #</font></label>
        </div>
      </div>
      <div class="row">
        <div class="input-field col s6 offset-s3">
-         <input placeholder="glucose_concentration" name="glucose" id="glucose_concentration" type="number" min="0" max="200" class="validate">
-         <label for="glucose_concentration"><font size="2.5">Glucose Concentration[0-200]</font></label>
+         <input placeholder="Clump Thickness" name="clump" id="clump" type="number" min="0" max="10" class="validate">
+         <label for="clump"><font size="2.5">Clump Thickness[0-10]</font></label>
        </div>
      </div>
      <div class="row">
        <div class="input-field col s6 offset-s3">
-         <input placeholder="Diastolic_blood_pressure" name="pressure" id="Diastolic_blood_pressure" type="number" min="0" max="200" class="validate">
-         <label for="Diastolic_blood_pressure"><font size="2.5">Diastolic Blood Pressure[0-200]</font></label>
+         <input placeholder="Uniformity of Cell Size" name="cell_size" id="cell_size" type="number" min="0" max="10" class="validate">
+         <label for="cell_size"><font size="2.5">Uniformity of Cell Size[0-10]</font></label>
        </div>
      </div>
      <div class="row">
        <div class="input-field col s6 offset-s3">
-         <input placeholder="Triceps_skin_fold_thickness" name="riceps" id="riceps_skin_fold_thickness" type="number" min="0" max="100" class="validate">
-         <label for="riceps_skin_fold_thickness"><font size="2.5">Triceps Skin Fold Thickness[0-100]</font></label>
+         <input placeholder="Uniformity of Cell Shape" name="cell_shape" id="cell_shape" type="number" min="0" max="10" class="validate">
+         <label for="cell_shape"><font size="2.5">Uniformity of Cell Shape[0-10]</font></label>
        </div>
      </div>
      <div class="row">
        <div class="input-field col s6 offset-s3">
-         <input placeholder="2hr_serum_insulin" name="serum" id="2hr_serum_insulin" type="number" min="0" max="1000" class="validate">
-         <label for="2hr_serum_insulin"><font size="2.5">2hr Serum Insulin[0-1000]</font></label>
+         <input placeholder="Marginal Adhesion" name="adhesion" id="adhesion" type="number" min="0" max="10" class="validate">
+         <label for="marginal_adhesion"><font size="2.5">Marginal Adhesion[0-10]</font></label>
        </div>
      </div>
      <div class="row">
        <div class="input-field col s6 offset-s3">
-         <input placeholder="BMI" name="BMI" id="BMI" type="number" min="0" max="70" class="validate">
-         <label for="BMI"><font size="2.5">BMI[0-70]</font></label> <a href="http://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/english_bmi_calculator/bmi_calculator.html">Need help calculating BMI?</a>
+         <input placeholder="Single Epithelial Cell Size" name="single_cell" id="single_cell" type="number" min="0" max="10" class="validate">
+         <label for="single_cell"><font size="2.5">Single Epithelial Cell Size[0-10]</font></label>
        </div>
      </div>
      <div class="row">
        <div class="input-field col s6 offset-s3">
-         <input placeholder="diabetics_pedigree_function" name="pedigree" id="diabetics_pedigree_function" type="number" min="0" max="3" class="validate">
-         <label for="diabetics_pedigree_function"><font size="2.5">Diabetics Pedigree Function[0-3]</font></label>
+         <input placeholder="Bare Nuclei" name="bare_nuclei" id="bare_nuclei" type="number" min="0" max="10" class="validate">
+         <label for="bare_nuclei"><font size="2.5">Bare Nuclei[0-10]</font></label>
        </div>
      </div>
      <div class="row">
        <div class="input-field col s6 offset-s3">
-         <input placeholder="age" name="age" id="age" type="number" min="1" max="100" class="validate">
-         <label for="age"><font size="2.5">Age[1-100]</font></label>
+         <input placeholder="Bland Chromatin" name="chromatin" id="chromatin" type="number" min="1" max="10" class="validate">
+         <label for="chromatin"><font size="2.5">Bland Chromatin[1-10]</font></label>
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="Normal Nucleoli" name="nucleoli" id="nucleoli" type="number" min="1" max="10" class="validate">
+         <label for="nucleoli"><font size="2.5">Normal Nucleoli[1-10]</font></label>
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="Mitoses" name="mitoses" id="mitoses" type="number" min="1" max="10" class="validate">
+         <label for="mitoses"><font size="2.5">Mitoses[1-10]</font></label>
        </div>
      </div>
      <div class="row">
