@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TEST</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body class="red lighten-3">
+    <div class="container">
+        <h1 class="center align">Diabetes Predictor</h1>
+        <div style="padding: 10px;" class="card row">
+   <form action="http://localhost:8080/diabeticApp" method="post" class="col s12">
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="num_pregnant" name="num_pregnant" id="num_pregnant" type="number" min="0" max="20" class="validate">
+         <label for="num_pregnant"><font size="2.5">Number of times pregnant[0-20]</font></label>
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="glucose_concentration" name="glucose" id="glucose_concentration" type="number" min="0" max="200" class="validate">
+         <label for="glucose_concentration"><font size="2.5">Glucose Concentration[0-200]</font></label>
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="Diastolic_blood_pressure" name="pressure" id="Diastolic_blood_pressure" type="number" min="0" max="200" class="validate">
+         <label for="Diastolic_blood_pressure"><font size="2.5">Diastolic Blood Pressure[0-200]</font></label>
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="Triceps_skin_fold_thickness" name="riceps" id="riceps_skin_fold_thickness" type="number" min="0" max="100" class="validate">
+         <label for="riceps_skin_fold_thickness"><font size="2.5">Triceps Skin Fold Thickness[0-100]</font></label>
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="2hr_serum_insulin" name="serum" id="2hr_serum_insulin" type="number" min="0" max="1000" class="validate">
+         <label for="2hr_serum_insulin"><font size="2.5">2hr Serum Insulin[0-1000]</font></label>
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="BMI" name="BMI" id="BMI" type="number" min="0" max="70" class="validate">
+         <label for="BMI"><font size="2.5">BMI[0-70]</font></label> <a href="http://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/english_bmi_calculator/bmi_calculator.html">Need help calculating BMI?</a>
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="diabetics_pedigree_function" name="pedigree" id="diabetics_pedigree_function" type="number" min="0" max="3" class="validate">
+         <label for="diabetics_pedigree_function"><font size="2.5">Diabetics Pedigree Function[0-3]</font></label>
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6 offset-s3">
+         <input placeholder="age" name="age" id="age" type="number" min="1" max="100" class="validate">
+         <label for="age"><font size="2.5">Age[1-100]</font></label>
+       </div>
+     </div>
+     <div class="row">
+       <div class="submit-field input-field col s6 offset-s3">
+         <input class="waves-effect waves-light red lighten-3 btn" type="submit" value="Submit" />
+       </div>
+     </div>
+   </form>
+
+ </div>
+    </div>
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container center align">
+          We don't save any of your information.
+        </div>
+      </div>
+    </footer>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+  </body>
+</html>
