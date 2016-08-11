@@ -17,6 +17,14 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
+app.get('/diabetic', function(req, res) {
+  res.sendFile(path.join(__dirname + '/diabetic_form.html'));
+});
+
+app.get('/cancer', function(req, res) {
+  res.sendFile(path.join(__dirname + '/cancer_form.html'));
+});
+
 //post request from index.html
 app.post('/sendFeatures', function(req, res) {
   var data = req.body;
