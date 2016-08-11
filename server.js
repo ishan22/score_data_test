@@ -29,7 +29,7 @@ app.post('/sendFeatures', function(req, res) {
     json: true,
     body: {
       'app_id': "32de6aca577a11e6862106f4115cbc5d",
-      'feature_data': data.patient_id+','+data.clump+','+data.cell_size+','+data.cell_shape+','+data.adhesion+','+data.single_cell+','
+      'feature_data': '0'+','+data.clump+','+data.cell_size+','+data.cell_shape+','+data.adhesion+','+data.single_cell+','
       +data.bare_nuclei+','+data.chromatin+','+data.nucleoli+','+data.mitoses+',0',
       'debug_mode': '1'
     }
