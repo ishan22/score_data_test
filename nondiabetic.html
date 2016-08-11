@@ -35,7 +35,7 @@
           } else if(res.score*100 >= 90){
             $('#prediction').text("The predictor believes that you definitely do not have diabetes.");
           }
-          $('#score').text("Accuracy: " + res.score * 100 + "%")
+          $('#score').text("Accuracy: " + (res.score * 100).toFixed(2) + "%")
         });
 
       });
