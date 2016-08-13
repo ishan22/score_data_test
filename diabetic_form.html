@@ -9,13 +9,23 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+    body {
+      height: 100%;
+      background: #333;
+    }
+
+    a {
+      color: #1ab394;
+    }
+    </style>
   </head>
 
-  <body class="red lighten-3">
+  <body>
     <div class="container">
+      <div style="padding: 10px;" class="card row">
         <h1 class="center align">Diabetes Predictor</h1>
-        <div style="padding: 10px;" class="card row">
-   <form action="http://localhost:8080/diabeticApp" method="post" class="col s12">
+   <form action="diabeticApp" method="post" class="col s12">
      <div class="row">
        <div class="input-field col s6 offset-s3">
          <input placeholder="num_pregnant" name="num_pregnant" id="num_pregnant" type="number" min="0" max="20" class="validate">
@@ -66,14 +76,14 @@
      </div>
      <div class="row">
        <div class="submit-field input-field col s6 offset-s3">
-         <input class="waves-effect waves-light red lighten-3 btn" type="submit" value="Submit" />
+         <input class="waves-effect waves-light btn" type="submit" value="Submit" />
        </div>
      </div>
    </form>
 
  </div>
     </div>
-    <footer class="page-footer">
+    <footer class="page-footer teal accent-4">
       <div class="footer-copyright">
         <div class="container center align">
           We don't save any of your information.

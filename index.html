@@ -5,20 +5,35 @@
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+    body {
+      height: 100%;
+      background: #333;
+    }
+
+    a {
+      color: #1ab394;
+    }
+    </style>
   </head>
 
-  <body style="height: 100%;" class="red lighten-3">
+  <body>
 
     <div style="height: 100%;" class="container">
         <div style="padding-top: 5px; padding-left:30px; height: 100%;" class="card row">
-        <h1 class="center align">App List</h1>
-        <a href="http://localhost:8080/diabetic"><font size="10">Diabetic Form</font></a>
+        <h1 class="center align">ScoreFast(TM) Applications</h1>
+        <a href="diabetic"><font size="10">Diabetic Form</font></a>
+        <div class="description">
+          <h5>Diagnosis form to determine whether one has diabetes or not.</h5>
+        </div>
         <br />
-        <a href="http://localhost:8080/cancer"><font size="10">Cancer Form</font></a>
+        <a href="cancer"><font size="10">Cancer Form</font></a>
+        <div class="description">
+          <h5>Diagnosis form to determine whether one has breast cancer or not.</h5>
+        </div>
       </div>
     </div>
     <!--Import jQuery before materialize.js-->
