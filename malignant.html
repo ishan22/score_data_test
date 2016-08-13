@@ -33,7 +33,7 @@
           } else if(res.score*100 >= 90){
             $('#prediction').text("The predictor believes that the cells are definitely malignant.");
           }
-          $('#score').text("Accuracy: " + res.score * 100 + "%")
+          $('#score').text("Accuracy: " + (res.score * 100).toFixed(2) + "%")
         });
       });
     </script>
